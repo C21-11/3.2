@@ -1,0 +1,37 @@
+<!DOCKTYPE html> 
+<html> 
+<head> 
+  <style> 
+        .highlight { 
+            background-color: yellow; 
+        } 
+    </style> 
+ <link rel="stylesheet" type="text/css" href="style.css"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+</head> 
+<body> 
+ <div id="myDiv">Div</div> 
+    <p class="highlight">List</p> 
+    <ul> 
+        <li>Youtube</li> 
+        <li>Twitch</li> 
+    </ul> 
+    <a href="https://www.youtube.com/" id="myLink">Ссылка</a> 
+ 
+ <script> 
+        let myDiv = document.getElementById('myDiv'); 
+        myDiv.style.color = 'blue'; 
+        myDiv.innerHTML = 'Streaming sites'; 
+        let myList = document.querySelector('ul'); 
+        let listItems = myList.children; 
+        for (let item of listItems) { 
+            item.style.fontWeight = 'bold'; 
+        } 
+        let myLink = document.getElementById('myLink'); 
+        myLink.addEventListener('click', function() { 
+            alert('Дійсно хочете перейти?'); 
+        }); 
+    </script> 
+</body> 
+</html>
